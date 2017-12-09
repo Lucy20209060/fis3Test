@@ -32,3 +32,9 @@ fis.media('dev')
 
 // extends GLOBAL config
 fis.media('production');
+
+fis.match('*.js', {
+    deploy: fis.plugin('local-deliver', {
+        to: './output'
+    })
+})
